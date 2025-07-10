@@ -1,12 +1,12 @@
 import pygame
 
-# Inicializar Pygame
+
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Lab 1 - Filling Any Polygon")
 clock = pygame.time.Clock()
 
-# Colores
+
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
@@ -28,12 +28,12 @@ polygons = [
     [(682, 175), (708, 120), (735, 148), (739, 170)]  # Este es un agujero dentro del anterior
 ]
 
-# Función de dibujo de líneas (opcional para depuración)
+
 def draw_polygon_edges(surface, points, color=BLACK):
     for i in range(len(points)):
         pygame.draw.line(surface, color, points[i], points[(i + 1) % len(points)], 1)
 
-# Algoritmo básico de Scanline Fill
+# Algoritmo  de Scanline Fill
 def scanline_fill(surface, polygon, color):
     # Ordenar vértices por Y
     edges = []
